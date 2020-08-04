@@ -22,7 +22,6 @@ public class WebPageConfiguration implements WebSocketMessageBrokerConfigurer {
         config.setApplicationDestinationPrefixes("/app");
     }
 
-
     //come
     //Register STOMP endpoints mapping each to a specific URL
     //and (optionally) enabling and configuring SockJS fallback options.
