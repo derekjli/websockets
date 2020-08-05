@@ -1,8 +1,8 @@
 <html>
 <head>
     <title>Chat WebSocket</title>
-    <script src="/webjars/sockjs.js"></script>
-    <script src="/webjars/stomp.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.js"></script>
     <script type="text/javascript">
             var stompClient = null;
 
@@ -15,7 +15,7 @@
             }
 
             function connect() {
-                var socket = new SockJS('/spring-mvc-java/chat');
+                var socket = new SockJS('/chat');
                 stompClient = Stomp.over(socket);
                 stompClient.connect({}, function(frame) {
                     setConnected(true);
